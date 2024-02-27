@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddPlayer from "./players/AddPlayer";
 import EditPlayer from "./players/EditPlayer";
+import ViewPlayer from "./players/ViewPlayer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
               <Route exact path="/addplayer" element={<AddPlayer />} />
               <Route exact path="/editplayer/:id" element={<EditPlayer />} />
+              <Route exact path="/viewplayer/:id" element={<ViewPlayer />} />
           </Routes>
         </Router>
       </div>

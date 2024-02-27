@@ -44,6 +44,12 @@ export default function Home() {
                             <td>{player.age}</td>
                             <td>
                                 <Link
+                                    className="btn btn-primary mx-2"
+                                    to={`/viewplayer/${player.id}`}
+                                >
+                                    View
+                                </Link>
+                                <Link
                                     className="btn btn-outline-primary mx-2"
                                     to={`/editplayer/${player.id}`}
                                 >

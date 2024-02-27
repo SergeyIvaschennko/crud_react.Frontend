@@ -43,6 +43,12 @@ export default function Home() {
                             <td>{player.lastname}</td>
                             <td>{player.age}</td>
                             <td>
+                                <Link
+                                    className="btn btn-outline-primary mx-2"
+                                    to={`/editplayer/${player.id}`}
+                                >
+                                    Edit
+                                </Link>
                                 <button className="btn btn-danger mx-2"
                                         onClick={() => deletePlayer(player.id)}
                                 >

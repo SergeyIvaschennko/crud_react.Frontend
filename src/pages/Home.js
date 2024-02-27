@@ -15,6 +15,11 @@ export default function Home() {
         setPlayer(result.data);
     };
 
+    const deletePlayer = async (id) => {
+        await axios.delete(`http://localhost:8080/player/${id}`);
+        loadPlayer();
+    };
+
     return (
         <div className="container">
             <div className="py-4">
@@ -38,7 +43,11 @@ export default function Home() {
                             <td>{player.lastname}</td>
                             <td>{player.age}</td>
                             <td>
-                                <button>
+                                <button className="btn btn-danger mx-2"
+                                        onClick={() => deletePlayer(player.id)}
+                                >
+                                    Delete
+
                                 </button>
                             </td>
                         </tr>

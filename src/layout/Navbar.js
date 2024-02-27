@@ -20,6 +20,9 @@ export default function Navbar() {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
+                    <Link className="btn btn-outline-light" to="/addplayer">
+                        Add Player
+                    </Link>
                 </div>
             </nav>
         </div>
